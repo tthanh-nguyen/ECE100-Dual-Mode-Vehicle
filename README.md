@@ -1,7 +1,9 @@
-# Dual-Mode Controlled Vehicle (ECE100 Project)
-- **Role:** Team Leader
-- **Platform:** Arduino IDE
-- **Key Tech:** SPI, UART, nRF24L01 Wireless Module
+### Dual-Mode Controlled Vehicle | *Team Leader*
 
-### Description
-Managed a student team to design and program a smart vehicle operating in manual and autonomous modes. Configured communication protocols between Arduino microcontrollers using the nRF24L01 module.
+* **Course:** Introduction to Electrical and Electronics Engineering (ECE100)
+* **Description:** Led a student team to build a smart vehicle controlled by **3 microcontrollers** working together.
+* **Key Responsibilities & Technical Stack:**
+* Designed the system layout and managed the connection between hardware and software.
+    * **Chip 1 (Master):** Connected to a PC and programmed to send wireless control commands using the **nRF24L01 module (via SPI interface)**.
+    * **Chip 2 (Slave Receiver):** Programmed to receive wireless signals from Chip 1, then pass the command down to Chip 3 **via UART interface**.
+    * **Chip 3 (Motor Controller):** Received data from Chip 2 **via UART** to control the motors. Programmed 2 modes: **Manual** (steering, acceleration) and **Autonomous** (automatic obstacle avoidance).
